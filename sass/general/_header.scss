@@ -73,7 +73,7 @@
       0px 4px 8px rgba(0, 0, 0, 0.04);
     background-color: $bg-color;
     border-top: 1px solid #ececec;
-    &.is-open {
+    & .is-open {
       display: block;
     }
   }
