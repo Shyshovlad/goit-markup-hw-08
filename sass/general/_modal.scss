@@ -1,0 +1,199 @@
+.backdrop {
+  position: fixed;
+  visibility: visible;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $form-bg-color;
+  transition: $transition;
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.visually-hidden {
+  @extend %visually-hidden;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 609px;
+  padding: 40px;
+  background: $bg-color;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.42;
+  letter-spacing: 0.01em;
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+    height: 581px;
+  }
+  p {
+    margin: 0px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+}
+.js-speaker-form {
+  label {
+    color: $secondary-text-color;
+  }
+}
+.form-field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+  transition: $transition;
+}
+.form-input {
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+  }
+}
+.comment {
+  margin-bottom: 20px;
+  .textarea-label {
+    position: absolute;
+    top: 20px;
+    left: 16px;
+  }
+  .textarea {
+    resize: none;
+    width: 100%;
+    padding: 12px 0 0 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    &:focus {
+      outline: none;
+      border: 1px solid $accent-color;
+    }
+  }
+}
+.checkbox {
+  position: relative;
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  .checkbox-label {
+    display: flex;
+  }
+  .icon-check {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1.5px solid black;
+    border-radius: 4px;
+    margin-right: 8px;
+    transition: $transition;
+  }
+}
+
+.icon-modal {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  margin-right: 8px;
+  transition: $transition;
+  .form-input:focus ~ & {
+    fill: $accent-color;
+  }
+}
+
+.form-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  padding: 10px 55px;
+  color: $text-white-color;
+  background-color: $accent-color;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+.form-button-close {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  transform: translate(-25%, 25%);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $bg-color;
+  cursor: pointer;
+}
+.close-icon {
+  width: 11px;
+  height: 11px;
+  transition: $transition;
+  .form-button-close:hover & {
+    fill: $accent-color;
+    transform: rotate(90deg);
+  }
+}
+
+.form-link {
+  text-decoration: underline;
+  color: $accent-color;
+}
+
+.form-field .form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  color: $accent-color;
+  transform: translate(-26px, -40px);
+}
+
+.form-field .textarea:focus + .textarea-label,
+.form-input:not(:placeholder-shown) + .textarea-label {
+  color: $accent-color;
+  transform: translateY(-40px);
+}
+
+.checkbox-input:checked + .checkbox-label > .icon-check {
+  background-image: url(../images/icon-check.svg);
+  background-color: $accent-color;
+  background-size: contain;
+  background-origin: border-box;
+  border-color: $accent-color;
+}

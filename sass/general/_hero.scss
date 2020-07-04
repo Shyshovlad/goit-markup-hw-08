@@ -1,0 +1,116 @@
+.hero {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  @media screen and (max-width: $desktop - 1) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url("../images/mobile_header.jpg");
+    height: 400px;
+    max-width: 768px;
+    background-size: 480px 400px;
+    @media screen and (min-device-pixel-ratio: 2) {
+      .hero {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.8),
+            rgba(47, 48, 58, 0.8)
+          ),
+          url("../images/mobile_header@2x.jpg");
+      }
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url("../images/tablet_header.jpg");
+    height: 400px;
+    max-width: 1200px;
+    background-size: 768px 400px;
+    @media screen and (min-device-pixel-ratio: 2) {
+      .hero {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.8),
+            rgba(47, 48, 58, 0.8)
+          ),
+          url("../images/tablet_header@2x.jpg");
+      }
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url("../images/header.jpg");
+    height: 600px;
+    max-width: 1600px;
+    background-size: 1600px 600px;
+    @media screen and (min-device-pixel-ratio: 2) {
+      .hero {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.8),
+            rgba(47, 48, 58, 0.8)
+          ),
+          url("../images/header@2x.jpg");
+      }
+    }
+  }
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-white-color;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: $desktop - 1) {
+    font-size: 26px;
+    line-height: 1.62;
+    padding-top: 118px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 44px;
+    line-height: 1.36;
+    padding-top: 200px;
+  }
+}
+.hero-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  color: $text-white-color;
+  background-color: $accent-color;
+  border: $accent-color;
+  border-radius: 3px;
+  min-width: 200px;
+  transition: $transition;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,100 @@
+.section-team {
+  background-color: $secondary-bg-color;
+
+  .team-title {
+    @media screen and (max-width: $desktop - 1) {
+      font-size: 28px;
+      line-height: 1.1785;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.team-list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .list-item {
+    background-color: $bg-color;
+
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    transition: $transition;
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 30px) / 2);
+      &:nth-child(2n + 1) {
+        margin-right: 30px;
+      }
+    }
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 90px) / 4);
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+    @media screen and (max-width: $tablet - 1) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    @media screen and (max-width: $desktop - 1) {
+      &:nth-child(-n + 2) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.team-card {
+  h3 {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.19;
+  }
+  p {
+    margin-top: 10px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: 400;
+    color: $secondary-text-color;
+    font-size: 16px;
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 24px;
+  }
+}
+.team-social-link {
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $svg-color;
+  transition: $transition;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: white;
+    transform: scale(1);
+  }
+}

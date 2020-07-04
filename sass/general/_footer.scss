@@ -1,0 +1,195 @@
+.footer-section {
+  background-color: $footer-bg-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (max-width: $desktop - 1) {
+    text-align: center;
+  }
+}
+.footer {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: baseline;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  @media screen and (min-width: $desktop) {
+    justify-content: space-between;
+  }
+
+  b {
+    display: block;
+    color: $text-white-color;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+}
+.footer-logo {
+  color: $accent-color;
+  font-size: 22px;
+  font-family: $logo-font;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  transition: $transition;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+  span {
+    color: $text-white-color;
+  }
+}
+.footer-adress {
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.adress {
+  color: $text-white-color;
+  margin-top: 10px;
+  margin-bottom: 9px;
+  transition: $transition;
+  &:hover,
+  &:focus {
+    @extend %hover-color;
+    cursor: pointer;
+  }
+}
+.mail {
+  color: rgba(255, 255, 255, 0.6);
+  display: block;
+  transition: $transition;
+  &:hover,
+  &:focus {
+    @extend %hover-color;
+  }
+}
+.telephone {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 9px;
+  margin-bottom: 28px;
+  transition: $transition;
+  &:hover,
+  &:focus {
+    @extend %hover-color;
+  }
+  @media screen and (max-width: $desktop - 1) {
+    margin-bottom: 60px;
+  }
+}
+.footer-social {
+  width: 207px;
+  @media screen and (max-width: $tablet - 1) {
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (max-width: $desktop - 1) {
+    margin-left: auto;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 69px;
+    margin-right: 93px;
+  }
+
+  &-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $bg-color;
+    transition: $transition;
+    .icon {
+      fill: currentColor;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .list {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: $desktop - 1) {
+      margin-bottom: 60px;
+    }
+  }
+  a:hover,
+  :focus {
+    background-color: $accent-color;
+    transform: scale(1.05);
+  }
+}
+.footer-form {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
+.input {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: $form-bg-color;
+  transition: $transition;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+  @media screen and (max-width: $tablet - 1) {
+    width: 100%;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+    width: 450px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+    margin-right: 12px;
+  }
+  @media screen and (max-width: $desktop - 1) {
+    margin-bottom: 20px;
+  }
+}
+.footer-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $text-white-color;
+  background-color: $accent-color;
+  padding: 10px 29px;
+  border-radius: 3px;
+  border: none;
+  min-width: 200px;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: $transition;
+  .icon-telegram {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+  @media screen and (max-width: $desktop - 1) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
